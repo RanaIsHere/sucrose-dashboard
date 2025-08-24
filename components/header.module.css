@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+    border-bottom: 1px solid #D0D0D0;
+    z-index: 1;
+}
+
+.header img {
+    cursor: pointer;
+}

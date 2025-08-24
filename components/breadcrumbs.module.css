@@ -1,0 +1,18 @@
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 8px;
+    z-index: inherit;
+}
+
+.origin {
+    opacity: 0.75;
+    font-weight: 400;
+}
+
+.destinationArrow {
+    opacity: 1;
+    font-weight: 800;
+}

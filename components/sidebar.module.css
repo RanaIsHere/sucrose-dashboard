@@ -1,0 +1,103 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    padding: 1rem;
+    width: 512px;
+    min-height: 100vh;
+    background-color: var(--foreground);
+    z-index: 100;
+    color: white;
+    transition: 300ms all;
+}
+
+.sidebarOpen {
+    left: 0%;
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.5);
+    transition: 300ms all;
+}
+
+.sidebarHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.sidebarHead img {
+    cursor: pointer;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: var(--foreground);
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+    transition: 300ms all;
+}
+
+.buttonItem:hover {
+    background-color: var(--foreground-light);
+    transition: 300ms all;
+}
+
+.topGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarAccount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 1rem;
+    border: 1px solid #717171;
+    user-select: none;
+    cursor: pointer;
+}
+
+.sidebarAccount:hover {
+    border: 1px solid #8d8d8d;
+}
+
+.accountInfo p {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.accountInfo p:nth-child(1) {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.accountInfo b {
+    font-weight: 800;
+}
+
+.accountPicker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
