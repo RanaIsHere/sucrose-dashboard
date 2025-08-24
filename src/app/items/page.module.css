@@ -48,6 +48,34 @@
     /* min-width: 80vw; */
 }
 
+.actionGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crudGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.crudGroup a {
+    color: black;
+    background-color: inherit;
+    border: 1px solid black;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.crudGroup a:hover {
+    background-color: var(--foreground-light);
+}
+
+.crudGroup a:hover span {
+    filter: invert(1) grayscale(1) contrast(2);
+}
+
 /* 
 @media screen and (width >=700px) {
     .searchBar {
