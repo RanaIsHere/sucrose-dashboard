@@ -1,0 +1,26 @@
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: var(--foreground);
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+    transition: 300ms all;
+}
+
+.buttonItem:hover {
+    background-color: var(--foreground-light);
+    transition: 300ms all;
+}
