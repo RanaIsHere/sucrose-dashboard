@@ -14,16 +14,16 @@ export default function Sidebar({ isOpenable, toggleSidebar }: isOpenableSidebar
     const cafeOwner: string = "Ronald Berg";
 
     return (
-        <aside className={`${styles.sidebar} ${isOpenable ? styles.sidebarOpen : ''}`} onClick={toggleSidebar}>
+        <aside className={`${styles.sidebar} ${isOpenable ? styles.sidebarOpen : ''}`}>
             <div className={styles.topGroup}>
                 <div className={styles.sidebarHead}>
                     <p>Menu</p>
                     <Image src="icons/x-mark-icon.svg" alt="Close" width={64} height={64} onClick={toggleSidebar} />
                 </div>
 
-                <ButtonGroup>
+                <ButtonGroup onClick={toggleSidebar}>
                     <ButtonItem content="Home" linkHref="/" linkImage='icons/house-icon.svg' linkAlt='Home icon' width={48} height={48} />
-                    <ButtonItem content="Items" linkHref="/" linkImage='icons/box-icon.svg' linkAlt='Box icon' width={48} height={48} />
+                    <ButtonItem content="Items" linkHref="/items" linkImage='icons/box-icon.svg' linkAlt='Box icon' width={48} height={48} />
                     <ButtonItem content="Orders" linkHref="/" linkImage='icons/bell-icon.svg' linkAlt='Bell icon' width={48} height={48} />
                     <ButtonItem content="Users" linkHref="/" linkImage='icons/user-icon.svg' linkAlt='User icon' width={48} height={48} />
                     <ButtonItem content="Manage" linkHref="/" linkImage='icons/gear-icon.svg' linkAlt='Gear icon' width={48} height={48} />

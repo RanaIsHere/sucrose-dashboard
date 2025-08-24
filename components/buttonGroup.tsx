@@ -1,15 +1,13 @@
-import Image from 'next/image';
-import Link from "next/link";
-
 import styles from './buttonGroup.module.css';
 
 type ButtonGroupProps = {
     children: React.ReactNode
+    onClick: () => void
 }
 
-export default function ButtonGroup({ children }: ButtonGroupProps) {
+export default function ButtonGroup({ children, onClick }: ButtonGroupProps) {
     return (
-        <div className={styles.buttonGroup}>
+        <div className={styles.buttonGroup} onClick={onClick}>
             {children}
         </div>
     );

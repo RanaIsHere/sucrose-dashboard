@@ -1,5 +1,6 @@
 import styles from './breadcrumbs.module.css';
 
+// TODO: Make Breadcrumbs() functional
 export default function Breadcrumbs() {
     return (
         <div className={styles.breadcrumbs}>

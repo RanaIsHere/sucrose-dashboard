@@ -6,8 +6,8 @@
     top: 0;
     left: -100%;
     padding: 1rem;
-    width: 512px;
     min-height: 100vh;
+    width: 100%;
     background-color: var(--foreground);
     z-index: 100;
     color: white;
@@ -56,12 +56,12 @@
 }
 
 .accountInfo p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 200;
 }
 
 .accountInfo p:nth-child(1) {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -73,4 +73,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+@media screen and (width >=600px) {
+    .sidebar {
+        width: 512px;
+    }
+
+    .accountInfo p {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+
+    .accountInfo p:nth-child(1) {
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+    .accountInfo b {
+        font-weight: 800;
+    }
 }
