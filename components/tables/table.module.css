@@ -1,0 +1,40 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.tableHead,
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.tableHeadItem,
+.tableRowItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+}
+
+.tableRowItem {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.tableHeadItem {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
