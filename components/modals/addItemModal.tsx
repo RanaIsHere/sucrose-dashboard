@@ -2,8 +2,10 @@ import Image from "next/image";
 
 import Modal from "@/components/modal";
 import { ModalProps } from "./modalType";
+import { MealType } from "../types/mealType";
 
 import { useModal } from "@/hooks/useModal";
+import { useState } from "react";
 
 import styles from './addItemModal.module.css';
 import AddTypeModal from "./addTypeModal";
@@ -11,8 +13,16 @@ import AddTypeModal from "./addTypeModal";
 export default function AddItemModal({ isOpen, toggleModal }: ModalProps) {
     const { isOpen: isTypeModalOpen, toggleModal: toggleTypeModal } = useModal(false);
 
+    const [mealTypes, setMealTypes] = useState<MealType[]>([
+    ]);
+
+    const confirmMealTypeChangeCallback = (mealType: MealType[]) => {
+        setMealTypes(mealType);
+        toggleTypeModal();
+    }
+
     return (
-        <Modal isOpen={isOpen} toggleModal={toggleModal} title='Add Meal' superimposedChildren={<AddTypeModal isOpen={isTypeModalOpen} toggleModal={toggleTypeModal} />}>
+        <Modal isOpen={isOpen} toggleModal={toggleModal} title='Add Meal' superimposedChildren={<AddTypeModal isOpen={isTypeModalOpen} toggleModal={toggleTypeModal} initialData={mealTypes} onConfirm={confirmMealTypeChangeCallback} />}>
             <form action="" method="post" className={styles.addForm}>
                 <label htmlFor="mealImage">Thumbnail</label>
                 <div className={styles.inputGroup}>

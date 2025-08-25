@@ -5,3 +5,16 @@
     gap: 1rem;
     margin: 2rem;
 }
+
+.innerButtonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.innerButtonGroup input {
+    flex: 1;
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: 5px;
+}
