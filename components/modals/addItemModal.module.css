@@ -51,6 +51,7 @@
 
 .inputGroup select {
     padding: 1em 2em 1em 2em;
+    border-radius: 5px;
 }
 
 /* .addForm button {
