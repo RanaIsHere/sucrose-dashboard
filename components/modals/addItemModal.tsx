@@ -42,7 +42,9 @@ export default function AddItemModal({ isOpen, toggleModal }: ModalProps) {
                         ))}
                     </select>
 
-                    <Image src="icons/plus-icon.svg" alt="Add type" width={32} height={32} onClick={toggleTypeModal} />
+                    <a href="#" onClick={toggleTypeModal}>
+                        <Image src="icons/plus-icon.svg" alt="Add type" width={32} height={32} />
+                    </a>
                 </div>
 
                 <label htmlFor="mealPrice">Price</label>

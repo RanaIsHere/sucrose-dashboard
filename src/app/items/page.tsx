@@ -52,7 +52,12 @@ export default function Items() {
                     <TableRow>
                         <TableRowItem><p>CC1</p></TableRowItem>
                         <TableRowItem><p>Coffee Delights</p></TableRowItem>
-                        <TableRowItem><p>Coffee Latte</p></TableRowItem>
+                        <TableRowItem>
+                            <select>
+                                <option value="Coffee Latte">Coffee Latte</option>
+                                <option value="Cappucino Coffee">Cappucino Coffee</option>
+                            </select>
+                        </TableRowItem>
                         <TableRowItem><p>$5.99</p></TableRowItem>
                         <TableRowItem>
                             <p className={styles.perks}>Delivery</p>
