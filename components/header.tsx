@@ -17,9 +17,13 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <Sidebar isOpenable={isOpen} toggleSidebar={openSidebar} />
-            <Image src="icons/menu-icon.svg" alt="Open menu" width={48} height={48} onClick={openSidebar} />
-            <Breadcrumbs />
+            <div className={styles.leftNav}>
+                <Sidebar isOpenable={isOpen} toggleSidebar={openSidebar} />
+                <Image src="icons/menu-icon.svg" alt="Open menu" width={48} height={48} onClick={openSidebar} />
+                <Breadcrumbs />
+            </div>
+
+            <Image src="icons/sun-icon.svg" alt="Light mode" width={48} height={48} />
         </header>
     );
 }

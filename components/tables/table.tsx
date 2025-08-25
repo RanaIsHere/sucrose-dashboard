@@ -6,7 +6,7 @@ export type TableProps = {
 
 export default function Table({ children }: TableProps) {
     return (
-        <div className={styles.table}>
+        <div className={styles.table} role='table'>
             {children}
         </div>
     );

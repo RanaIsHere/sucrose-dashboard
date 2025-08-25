@@ -1,30 +1,25 @@
 'use client'
 
 import Image from 'next/image';
-import Header from '../../../components/header';
-import Table from '../../../components/tables/table';
-import TableHead from '../../../components/tables/tableHead';
-import TableHeadItem from '../../../components/tables/tableHeadItem';
-import TableRow from '../../../components/tables/tableRow';
-import TableRowItem from '../../../components/tables/tableRowItem';
+import Header from '@/components/header';
+import Table from '@/components/tables/table';
+import TableHead from '@/components/tables/tableHead';
+import TableHeadItem from '@/components/tables/tableHeadItem';
+import TableRow from '@/components/tables/tableRow';
+import TableRowItem from '@/components/tables/tableRowItem';
 import styles from './page.module.css';
-import Modal from '../../../components/modal';
-import { useModal } from '../../../hooks/useModal';
+import { useModal } from '@/hooks/useModal';
+import AddItemModal from '@/components/modals/addItemModal';
 
 export default function Items() {
     const { isOpen: isAddModalOpen, toggleModal: toggleAddModal } = useModal(false);
-    const { isOpen: isConfirmModalOpen, toggleModal: toggleConfirmModal } = useModal(false);
 
     return (
         <div className={styles.page}>
             <Header />
-            <Modal isOpen={isAddModalOpen} toggleModal={toggleAddModal} title='Add Item' >
-                <p>Hello world!</p>
-            </Modal>
 
-            <Modal isOpen={isConfirmModalOpen} toggleModal={toggleConfirmModal} title='Are you sure?' >
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis enim consequuntur doloribus odio nisi voluptates veniam? Aliquid nihil voluptas quam cumque laborum aperiam ratione maiores explicabo perspiciatis magnam. Illo.</p>
-            </Modal>
+            <AddItemModal isOpen={isAddModalOpen} toggleModal={toggleAddModal} />
+
 
             <main className={styles.main}>
                 <div className={styles.actionGroup}>
@@ -39,8 +34,8 @@ export default function Items() {
 
                     {/* This might be a horrendous fix to contrast text, but who knows? */}
                     <div className={styles.crudGroup}>
-                        <a href="#create" onClick={toggleAddModal}><span>Add</span></a>
-                        <a href="#export" onClick={toggleConfirmModal}><span>Export</span></a>
+                        <a href="#createItem" onClick={toggleAddModal} className='outlineBtn'><span>Add Meal</span></a>
+                        <a href="#export" className='outlineBtn'><span>Export</span></a>
                     </div>
                 </div>
 

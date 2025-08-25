@@ -1,10 +1,17 @@
 .header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 2rem;
     gap: 2rem;
     border-bottom: 1px solid #D0D0D0;
     z-index: 1;
+}
+
+.leftNav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 .header img {
