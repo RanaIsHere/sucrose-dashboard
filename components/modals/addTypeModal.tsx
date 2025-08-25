@@ -10,7 +10,6 @@ import { ModalProps } from "./modalType";
 import { MealType } from "../types/mealType";
 
 import styles from './addTypeModal.module.css';
-import { randomInt } from "crypto";
 
 type MealTypeProps = {
     initialData: MealType[],
@@ -33,10 +32,12 @@ export default function AddTypeModal({ isOpen, toggleModal, initialData, onConfi
             id: Date.now(),
             name: newMealTypeInput.trim()
         }]);
+
+        setNewMealTypeInput('');
     }
 
     const handleDeleteType = (id: number) => {
-        setModalMealTypes(modalMealTypes.splice(id, 1))
+        setModalMealTypes(modalMealTypes.filter(type => type.id !== id));
     }
 
     const handleConfirm = () => {
@@ -47,7 +48,7 @@ export default function AddTypeModal({ isOpen, toggleModal, initialData, onConfi
         <Modal title='Add Meal Type' isOpen={isOpen} toggleModal={toggleModal}>
             <div className={styles.buttonGroup}>
                 <div className={styles.innerButtonGroup}>
-                    <input type="text" name="mealType" id="mealType" placeholder="What's the type of meal?" onChange={(e) => { setNewMealTypeInput(e.target.value) }} />
+                    <input type="text" name="mealType" id="mealType" placeholder="What's the type of meal?" value={newMealTypeInput} onChange={(e) => { setNewMealTypeInput(e.target.value) }} />
                     <button className="outlineBtn" onClick={handleAddType}><span>Add</span></button>
                 </div>
                 <button className="outlineBtn" onClick={handleConfirm}><span>Confirm</span></button>

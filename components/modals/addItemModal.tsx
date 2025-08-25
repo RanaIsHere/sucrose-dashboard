@@ -37,7 +37,9 @@ export default function AddItemModal({ isOpen, toggleModal }: ModalProps) {
                 <label htmlFor="mealType">Meal Type</label>
                 <div className={styles.inputGroup}>
                     <select name="mealType" id="mealType">
-                        <option value="n/a">None so far</option>
+                        {mealTypes.map((type) => (
+                            <option key={type.id} value={type.name}>{type.name}</option>
+                        ))}
                     </select>
 
                     <Image src="icons/plus-icon.svg" alt="Add type" width={32} height={32} onClick={toggleTypeModal} />
